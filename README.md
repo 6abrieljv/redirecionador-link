@@ -185,6 +185,7 @@ https://6abriel.com/meu-link
 ### `GET /links/{slug}/analytics`
 
 Retorna um resumo dos cliques do link.
+Inclui os ultimos 20 cliques com IP e localizacao.
 
 Response (`200 OK`):
 
@@ -210,6 +211,18 @@ Response (`200 OK`):
   "countryNames": [
     { "label": "Brazil", "count": 10 },
     { "label": "Unknown", "count": 2 }
+  ],
+  "recentClicks": [
+    {
+      "ipAddress": "203.0.113.10",
+      "countryName": "Brazil",
+      "regionName": "SP",
+      "cityName": "Sao Paulo",
+      "deviceClass": "Desktop",
+      "osName": "Windows",
+      "agentName": "Chrome",
+      "clickedAt": "2026-01-27T18:53:51.000Z"
+    }
   ]
 }
 ```

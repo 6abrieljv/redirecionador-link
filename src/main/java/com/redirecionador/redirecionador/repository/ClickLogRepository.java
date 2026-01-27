@@ -57,4 +57,6 @@ public interface ClickLogRepository extends JpaRepository<ClickLog, Long> {
             order by count(cl) desc
             """)
     List<LabelCount> countByCountryName(@Param("slug") String slug);
+
+    List<ClickLog> findTop20BySlugOrderByClickedAtDesc(String slug);
 }

@@ -9,6 +9,7 @@ public record LinkAnalyticsResponse(
         List<LabelCount> deviceClasses,
         List<LabelCount> osNames,
         List<LabelCount> agentNames,
-        List<LabelCount> countryNames
+        List<LabelCount> countryNames,
+        List<ClickDetail> recentClicks
 ) {
 }
